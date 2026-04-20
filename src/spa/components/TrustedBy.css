@@ -1,0 +1,82 @@
+.trusted-by {
+  padding: 4rem 2rem;
+  background: #000000;
+}
+
+.trusted-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trusted-by h2 {
+  font-size: 1.5rem;
+  color: #FFD700;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.logos-scroll {
+  overflow: hidden;
+  position: relative;
+}
+
+.logos-track {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 100px;
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(255, 215, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo-emoji {
+  font-size: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: #FFD700;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+}
+
+.logo-item:hover .logo-emoji {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .trusted-by {
+    padding: 3rem 1rem;
+  }
+
+  .trusted-by h2 {
+    font-size: 1.2rem;
+  }
+
+  .logos-track {
+    gap: 1.5rem;
+  }
+
+  .logo-item {
+    min-width: 80px;
+    height: 80px;
+  }
+
+  .logo-emoji {
+    font-size: 2rem;
+  }
+}

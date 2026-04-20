@@ -1,0 +1,122 @@
+.cta {
+  padding: 6rem 2rem;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 0% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 100% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.99);
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.cta-primary,
+.cta-secondary {
+  padding: 1.1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  letter-spacing: 0.5px;
+}
+
+.cta-primary {
+  background: #FFD700;
+  color: #000000;
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+.cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+  background: #FFF44F;
+}
+
+.cta-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid #FFD700;
+  backdrop-filter: blur(10px);
+}
+
+.cta-secondary:hover {
+  background: rgba(255, 215, 0, 0.1);
+  border-color: #FFF44F;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.cta-lion {
+  font-size: 5rem;
+  margin-top: 2rem;
+  filter: drop-shadow(0 5px 15px rgba(255, 193, 7, 0.3));
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 4rem 1rem;
+  }
+
+  .cta-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+  }
+
+  .cta-lion {
+    font-size: 3rem;
+  }
+}
