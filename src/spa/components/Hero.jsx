@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
-import NeoLeoHero from '../../NeoLeoHero.jsx'
 import './Hero.css'
+
+const HERO_VIDEO = '/videos/hero-lion.mp4'
+const HERO_POSTER = '/images/NL_hero.png'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -73,8 +75,19 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="lion-container hero-webgl-root">
-            <NeoLeoHero />
+          <div className="hero-video-wrap">
+            <video
+              className="hero-mascot-video"
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster={HERO_POSTER}
+              preload="metadata"
+              aria-label="NeoLeo mascot animation — stylized lion character"
+            >
+              <source src={HERO_VIDEO} type="video/mp4" />
+            </video>
           </div>
         </motion.div>
       </div>

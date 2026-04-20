@@ -1,6 +1,6 @@
 .case-studies {
   padding: 6rem 2rem;
-  background: #ffffff;
+  background: var(--color-bg-white);
   min-height: 100vh;
 }
 
@@ -18,12 +18,12 @@
   font-size: 2.8rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  color: #000000;
+  color: var(--color-text-navy);
 }
 
 .case-studies-header p {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--color-text-muted);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.7;
@@ -36,8 +36,8 @@
 }
 
 .case-study-card {
-  background: #f9f9f9;
-  border: 2px solid rgba(255, 215, 0, 0.1);
+  background: var(--color-bg);
+  border: 2px solid rgba(201, 169, 97, 0.1);
   border-radius: 20px;
   padding: 2.5rem;
   transition: all 0.3s ease;
@@ -46,9 +46,9 @@
 }
 
 .case-study-card:hover {
-  border-color: #FFD700;
-  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15);
-  background: #ffffff;
+  border-color: var(--color-accent);
+  box-shadow: 0 15px 40px rgba(201, 169, 97, 0.15);
+  background: var(--color-bg-white);
 }
 
 .case-study-header {
@@ -76,26 +76,26 @@
 .case-study-title-section h3 {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #000000;
+  color: var(--color-text-navy);
   margin: 0;
 }
 
 .subtitle {
   font-size: 0.9rem;
-  color: #FFD700;
+  color: var(--color-accent);
   font-weight: 600;
   margin: 0.3rem 0 0 0;
 }
 
 .expand-icon {
   font-size: 1.5rem;
-  color: #FFD700;
+  color: var(--color-accent);
   transition: transform 0.3s ease;
 }
 
 .case-study-description {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--color-text-muted);
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
@@ -106,7 +106,7 @@
   gap: 1rem;
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background: rgba(255, 215, 0, 0.05);
+  background: rgba(201, 169, 97, 0.05);
   border-radius: 12px;
 }
 
@@ -117,12 +117,12 @@
 .stat-value {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #FFD700;
+  color: var(--color-accent);
 }
 
 .stat-label {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--color-text-subtle);
   font-weight: 600;
   margin-top: 0.3rem;
   text-transform: uppercase;
@@ -130,8 +130,8 @@
 }
 
 .carousel-placeholder {
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 215, 0, 0.02));
-  border: 2px dashed rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, rgba(201, 169, 97, 0.05), rgba(201, 169, 97, 0.02));
+  border: 2px dashed rgba(201, 169, 97, 0.3);
   border-radius: 12px;
   padding: 3rem 2rem;
   text-align: center;
@@ -152,18 +152,18 @@
 .carousel-content p {
   font-size: 1rem;
   font-weight: 600;
-  color: #000;
+  color: var(--color-text-navy);
   margin: 0;
 }
 
 .carousel-content small {
-  color: #999;
+  color: var(--color-text-subtle);
   font-size: 0.85rem;
 }
 
 .expanded-content {
   overflow: hidden;
-  border-top: 2px solid rgba(255, 215, 0, 0.1);
+  border-top: 2px solid rgba(201, 169, 97, 0.1);
   padding-top: 1.5rem;
 }
 
@@ -174,7 +174,7 @@
 .highlights h4 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #000;
+  color: var(--color-text-navy);
   margin-bottom: 1rem;
 }
 
@@ -189,7 +189,7 @@
 
 .highlights li {
   font-size: 0.9rem;
-  color: #555;
+  color: var(--color-text-muted);
   line-height: 1.6;
   display: flex;
   align-items: flex-start;
@@ -197,7 +197,7 @@
 }
 
 .highlight-icon {
-  color: #FFD700;
+  color: var(--color-accent);
   font-weight: 800;
   margin-top: 2px;
   flex-shrink: 0;
@@ -205,14 +205,14 @@
 
 .case-study-link {
   display: inline-block;
-  background: #FFD700;
-  color: #000000;
+  background: var(--color-accent);
+  color: var(--color-text-navy);
   padding: 0.8rem 1.8rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(201, 169, 97, 0.3);
   border: none;
   cursor: pointer;
   font-size: 0.95rem;
@@ -220,8 +220,8 @@
 }
 
 .case-study-link:hover {
-  background: #FFF44F;
-  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+  background: var(--color-accent-hover);
+  box-shadow: 0 10px 30px rgba(201, 169, 97, 0.4);
   transform: translateY(-2px);
 }
 

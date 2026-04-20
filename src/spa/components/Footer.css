@@ -1,8 +1,8 @@
 .footer {
-  background: #000000;
-  color: #fff;
+  background: var(--color-secondary);
+  color: var(--color-on-inverse);
   padding: 4rem 2rem 2rem;
-  border-top: 1px solid rgba(255, 215, 0, 0.1);
+  border-top: 1px solid var(--color-on-inverse-border);
 }
 
 .footer-content {
@@ -16,7 +16,7 @@
   gap: 4rem;
   margin-bottom: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-on-inverse-border-strong);
 }
 
 .footer-brand {
@@ -28,11 +28,11 @@
 .footer-logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #FFD700;
+  color: var(--color-on-inverse);
 }
 
 .footer-brand p {
-  color: #999;
+  color: var(--color-on-inverse-muted);
   font-size: 0.95rem;
   line-height: 1.7;
   font-weight: 500;
@@ -48,7 +48,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: var(--color-on-inverse);
 }
 
 .footer-column ul {
@@ -61,14 +61,14 @@
 }
 
 .footer-column a {
-  color: #aaa;
+  color: var(--color-on-inverse-subtle);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
 .footer-column a:hover {
-  color: #FFD700;
+  color: var(--color-on-inverse);
 }
 
 .footer-bottom {
@@ -76,10 +76,10 @@
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-on-inverse-border);
   flex-wrap: wrap;
   gap: 2rem;
-  color: #aaa;
+  color: var(--color-on-inverse-subtle);
   font-size: 0.9rem;
 }
 
@@ -96,14 +96,14 @@
 }
 
 .footer-contact a {
-  color: #FFD700;
+  color: var(--color-accent);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .footer-contact a:hover {
-  color: #FFF44F;
+  color: var(--color-on-inverse);
 }
 
 .footer-social {
@@ -112,13 +112,13 @@
 }
 
 .footer-social a {
-  color: #aaa;
+  color: var(--color-on-inverse-muted);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-social a:hover {
-  color: #FFD700;
+  color: var(--color-accent);
 }
 
 @media (max-width: 768px) {

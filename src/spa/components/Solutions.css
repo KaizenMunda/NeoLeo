@@ -1,6 +1,6 @@
 .solutions {
   padding: 6rem 2rem;
-  background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-white) 100%);
   min-height: 100vh;
 }
 
@@ -18,12 +18,12 @@
   font-size: 2.8rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: var(--color-text-navy);
 }
 
 .solutions-header p {
   font-size: 1.1rem;
-  color: #aaa;
+  color: var(--color-text-subtle);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.7;
@@ -37,8 +37,8 @@
 }
 
 .solution-card {
-  background: rgba(255, 215, 0, 0.02);
-  border: 1px solid rgba(255, 215, 0, 0.15);
+  background: rgba(201, 169, 97, 0.02);
+  border: 1px solid rgba(201, 169, 97, 0.15);
   border-radius: 16px;
   padding: 2.5rem;
   transition: all 0.3s ease;
@@ -56,14 +56,14 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #FFD700, transparent);
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .solution-card:hover {
-  border-color: #FFD700;
-  background: rgba(255, 215, 0, 0.05);
+  border-color: var(--color-accent);
+  background: rgba(201, 169, 97, 0.05);
 }
 
 .solution-card:hover::before {
@@ -79,13 +79,13 @@
 .solution-card h3 {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-text-navy);
   margin-bottom: 0.75rem;
 }
 
 .solution-description {
   font-size: 0.95rem;
-  color: #aaa;
+  color: var(--color-text-subtle);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1;
@@ -94,9 +94,9 @@
 .features-list {
   margin-bottom: 2rem;
   padding: 1.2rem;
-  background: rgba(255, 215, 0, 0.03);
+  background: rgba(201, 169, 97, 0.03);
   border-radius: 8px;
-  border-left: 3px solid #FFD700;
+  border-left: 3px solid var(--color-accent);
 }
 
 .feature-item {
@@ -105,7 +105,7 @@
   gap: 0.6rem;
   margin-bottom: 0.5rem;
   font-size: 0.85rem;
-  color: #ddd;
+  color: var(--color-text-muted);
   line-height: 1.4;
 }
 
@@ -114,7 +114,7 @@
 }
 
 .feature-icon {
-  color: #FFD700;
+  color: var(--color-accent);
   font-weight: 800;
   margin-top: 1px;
   flex-shrink: 0;
@@ -127,28 +127,28 @@
 }
 
 .learn-more-btn {
-  background: #FFD700;
-  color: #000000;
+  background: var(--color-accent);
+  color: var(--color-text-navy);
   border: none;
   padding: 0.8rem 1.8rem;
   border-radius: 50px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(201, 169, 97, 0.3);
   font-size: 0.95rem;
   letter-spacing: 0.5px;
 }
 
 .learn-more-btn:hover {
-  background: #FFF44F;
-  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+  background: var(--color-accent-hover);
+  box-shadow: 0 10px 30px rgba(201, 169, 97, 0.5);
 }
 
 /* Solutions Highlights */
 .solutions-highlights {
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 215, 0, 0.02));
-  border: 1px solid rgba(255, 215, 0, 0.2);
+  background: linear-gradient(135deg, rgba(201, 169, 97, 0.05), rgba(201, 169, 97, 0.02));
+  border: 1px solid rgba(201, 169, 97, 0.2);
   border-radius: 20px;
   padding: 4rem 2rem;
 }
@@ -156,7 +156,7 @@
 .solutions-highlights h3 {
   font-size: 2rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-text-navy);
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -168,8 +168,8 @@
 }
 
 .highlight-item {
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 215, 0, 0.1);
+  background: var(--color-bg-white);
+  border: 1px solid rgba(201, 169, 97, 0.2);
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
@@ -177,8 +177,8 @@
 }
 
 .highlight-item:hover {
-  border-color: #FFD700;
-  background: rgba(255, 215, 0, 0.08);
+  border-color: var(--color-accent);
+  background: rgba(201, 169, 97, 0.08);
   transform: translateY(-5px);
 }
 
@@ -191,13 +191,13 @@
 .highlight-item h4 {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #FFD700;
+  color: var(--color-accent);
   margin-bottom: 0.75rem;
 }
 
 .highlight-item p {
   font-size: 0.95rem;
-  color: #aaa;
+  color: var(--color-text-subtle);
   line-height: 1.6;
 }
 

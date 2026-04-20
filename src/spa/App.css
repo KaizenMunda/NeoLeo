@@ -1,3 +1,54 @@
+/*
+  Palette with contrast-first tokens (WCAG-minded).
+  Surfaces: cream (--color-bg), white (--color-bg-white), deep green (--color-secondary).
+  Use --color-ink* on light surfaces; --color-on-inverse* on green/dark bands.
+*/
+:root {
+  --color-bg: #f5e6d3;
+  --color-bg-white: #ffffff;
+  --color-bg-elevated: #fffdf9;
+
+  /* Primary accent — golden brown */
+  --color-accent: #c9a961;
+  --color-accent-hover: #a8863d;
+  --color-accent-active: #8f6f32;
+  --color-accent-soft: rgba(201, 169, 97, 0.18);
+  --color-accent-border: rgba(90, 72, 40, 0.22);
+  --color-accent-border-strong: rgba(74, 58, 28, 0.35);
+
+  /* Secondary — deep green (surfaces + borders on light bg) */
+  --color-secondary: #3d5248;
+  --color-secondary-hover: #2f3f37;
+  --color-secondary-soft: rgba(61, 82, 72, 0.1);
+  --color-secondary-border: rgba(61, 82, 72, 0.28);
+
+  /* Text on cream / white — dark enough for ~AA on #f5e6d3 */
+  --color-ink: #141c22;
+  --color-ink-secondary: #2a3540;
+  --color-ink-muted: #3d4a54;
+  --color-ink-subtle: #5a6670;
+
+  /* Text & UI on deep green / dark surfaces */
+  --color-on-inverse: #fefdfb;
+  --color-on-inverse-muted: #e8f0ec;
+  --color-on-inverse-subtle: #c5d4cc;
+  --color-on-inverse-border: rgba(255, 255, 255, 0.22);
+  --color-on-inverse-border-strong: rgba(255, 255, 255, 0.38);
+
+  /* Text on gold (buttons) — must stay dark */
+  --color-on-accent: #141c22;
+
+  /* Legacy aliases (components still reference these) */
+  --color-text: var(--color-ink-secondary);
+  --color-text-navy: var(--color-ink);
+  --color-text-muted: var(--color-ink-muted);
+  --color-text-subtle: var(--color-ink-subtle);
+
+  --shadow-accent: rgba(61, 48, 22, 0.12);
+  --shadow-secondary: rgba(45, 58, 52, 0.12);
+  --shadow-elevated: rgba(20, 28, 34, 0.08);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,24 +65,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #333;
-  background: #fff;
+  color: var(--color-ink-secondary);
+  background: var(--color-bg);
+}
+
+/* Override Webflow `body.body` (#000) when SPA is mounted */
+body:has(#spa-root) {
+  background-color: var(--color-bg) !important;
+  color: var(--color-ink-secondary);
 }
 
 .app {
   width: 100%;
   overflow-x: hidden;
+  background: transparent;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
+  color: var(--color-ink);
 }
 
 p {
   line-height: 1.6;
-  color: #666;
+  color: var(--color-ink-muted);
 }
 
 a {
@@ -43,20 +102,27 @@ button {
   font-family: inherit;
 }
 
+/* Focus visibility for keyboard users */
+.app a:focus-visible,
+.app button:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: var(--color-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FFD700;
+  background: var(--color-secondary);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FFF44F;
+  background: var(--color-secondary-hover);
 }

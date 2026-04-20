@@ -2,10 +2,11 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+  background: rgba(255, 253, 249, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-secondary-border);
   padding: 1rem 0;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
 }
 
 .navbar-container {
@@ -23,7 +24,7 @@
   gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  color: var(--color-text-navy);
   text-decoration: none;
 }
 
@@ -32,7 +33,7 @@
 }
 
 .logo-text {
-  color: #FFD700;
+  color: var(--color-accent);
 }
 
 .nav-links {
@@ -42,7 +43,7 @@
 }
 
 .nav-link {
-  color: #ffffff;
+  color: var(--color-text-navy);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -56,7 +57,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #FFD700;
+  background: var(--color-secondary);
   transition: width 0.3s ease;
 }
 
@@ -65,12 +66,12 @@
 }
 
 .nav-link:hover {
-  color: #FFD700;
+  color: var(--color-secondary);
 }
 
 .cta-button {
-  background: #FFD700;
-  color: #000000;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
   border: none;
   padding: 0.8rem 1.8rem;
   border-radius: 50px;
@@ -78,7 +79,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 6px 20px var(--shadow-accent);
   display: inline-block;
   text-decoration: none;
   text-align: center;
@@ -87,8 +88,9 @@
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(255, 215, 0, 0.5);
-  background: #FFF44F;
+  box-shadow: 0 12px 35px var(--shadow-accent);
+  background: var(--color-accent-hover);
+  color: var(--color-on-accent);
 }
 
 @media (max-width: 768px) {

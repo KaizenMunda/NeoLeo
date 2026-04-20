@@ -1,6 +1,8 @@
 .trusted-by {
   padding: 4rem 2rem;
-  background: #000000;
+  background: var(--color-bg-white);
+  border-top: 1px solid var(--color-secondary-border);
+  border-bottom: 1px solid var(--color-secondary-border);
 }
 
 .trusted-container {
@@ -11,9 +13,9 @@
 
 .trusted-by h2 {
   font-size: 1.5rem;
-  color: #FFD700;
+  color: var(--color-ink-secondary);
   margin-bottom: 3rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .logos-scroll {
@@ -37,10 +39,10 @@
   height: 100px;
   padding: 1rem;
   border-radius: 16px;
-  background: rgba(255, 215, 0, 0.05);
+  background: var(--color-secondary-soft);
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 215, 0, 0.1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-secondary-border);
+  box-shadow: 0 4px 15px var(--shadow-secondary);
 }
 
 .logo-emoji {
@@ -49,9 +51,9 @@
 }
 
 .logo-item:hover {
-  background: rgba(255, 215, 0, 0.15);
-  border-color: #FFD700;
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 25px var(--shadow-accent);
 }
 
 .logo-item:hover .logo-emoji {

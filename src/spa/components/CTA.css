@@ -1,6 +1,6 @@
 .cta {
   padding: 6rem 2rem;
-  background: #000000;
+  background: var(--color-secondary);
   position: relative;
   overflow: hidden;
 }
@@ -12,8 +12,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 0% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 100% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 50%);
+  background: radial-gradient(circle at 0% 50%, rgba(201, 169, 97, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 100% 50%, rgba(245, 230, 211, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -21,7 +21,7 @@
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  color: white;
+  color: var(--color-on-inverse);
   position: relative;
   z-index: 1;
 }
@@ -31,13 +31,13 @@
   font-weight: 800;
   margin-bottom: 1rem;
   line-height: 1.2;
-  color: rgba(255, 255, 255, 0.99);
+  color: var(--color-on-inverse);
 }
 
 .cta-content p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--color-on-inverse-muted);
   line-height: 1.7;
   font-weight: 500;
 }
@@ -63,35 +63,37 @@
 }
 
 .cta-primary {
-  background: #FFD700;
-  color: #000000;
-  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  box-shadow: 0 8px 24px var(--shadow-accent);
 }
 
 .cta-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
-  background: #FFF44F;
+  box-shadow: 0 15px 36px var(--shadow-accent);
+  background: var(--color-accent-hover);
+  color: var(--color-on-accent);
 }
 
 .cta-secondary {
   background: transparent;
-  color: white;
-  border: 2px solid #FFD700;
+  color: var(--color-on-inverse);
+  border: 2px solid var(--color-on-inverse-border-strong);
   backdrop-filter: blur(10px);
 }
 
 .cta-secondary:hover {
-  background: rgba(255, 215, 0, 0.1);
-  border-color: #FFF44F;
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+  color: var(--color-on-accent);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 10px 28px var(--shadow-secondary);
 }
 
 .cta-lion {
   font-size: 5rem;
   margin-top: 2rem;
-  filter: drop-shadow(0 5px 15px rgba(255, 193, 7, 0.3));
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
 }
 
 @media (max-width: 768px) {
