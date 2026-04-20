@@ -2,6 +2,12 @@
   command = "npm run build"
   publish = "dist"
 
+# Canonical homepage is the React app at /. Old /spa.html redirects here.
+[[redirects]]
+  from = "/spa.html"
+  to = "/"
+  status = 301
+
 # Custom 404 page - Netlify will automatically use 404.html for 404 errors
 # No need for explicit redirects since this is a static HTML site
 
