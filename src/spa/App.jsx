@@ -11,6 +11,10 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import CaseStudyDetailSaksham from './components/CaseStudyDetail-Saksham'
 import CaseStudyDetailSwasthya from './components/CaseStudyDetail-Swasthya'
+import ParticleBackground from './components/ParticleBackground'
+import CursorAnimation from './components/CursorAnimation'
+import './components/animations.css'
+import './components/cursor-animation.css'
 import './App.css'
 
 function HomePage() {
@@ -31,8 +35,11 @@ function HomePage() {
 
 export default function App() {
   return (
-    <Router>
-      <Routes>
+    <>
+      <ParticleBackground density={40} color="rgba(201, 169, 97, 0.3)" />
+      <CursorAnimation />
+      <Router>
+        <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/case-study/saksham" element={
           <>
@@ -49,6 +56,7 @@ export default function App() {
           </>
         } />
       </Routes>
-    </Router>
+      </Router>
+    </>
   )
 }

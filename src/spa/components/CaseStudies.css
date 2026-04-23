@@ -47,8 +47,9 @@
 
 .case-study-card:hover {
   border-color: var(--color-accent);
-  box-shadow: 0 15px 40px rgba(201, 169, 97, 0.15);
+  box-shadow: 0 20px 50px rgba(201, 169, 97, 0.15);
   background: var(--color-bg-white);
+  transform: translateY(-8px);
 }
 
 .case-study-header {

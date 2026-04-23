@@ -79,6 +79,8 @@ body:has(#spa-root) {
   width: 100%;
   overflow-x: hidden;
   background: transparent;
+  position: relative;
+  z-index: 101;
 }
 
 /* Typography */
