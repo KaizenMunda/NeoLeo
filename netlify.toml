@@ -8,6 +8,17 @@
   to = "/"
   status = 301
 
+# Ayu legal pages — clean URLs for App Store / Play Console
+[[redirects]]
+  from = "/legal/ayu/privacy"
+  to = "/legal/ayu/privacy/"
+  status = 301
+
+[[redirects]]
+  from = "/legal/ayu/terms"
+  to = "/legal/ayu/terms/"
+  status = 301
+
 # Custom 404 page - Netlify will automatically use 404.html for 404 errors
 # No need for explicit redirects since this is a static HTML site
 

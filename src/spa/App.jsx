@@ -1,62 +1,73 @@
-import { motion } from 'framer-motion'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Features from './components/Features'
-import TrustedBy from './components/TrustedBy'
-import Solutions from './components/Solutions'
-import CaseStudies from './components/CaseStudies'
-import Career from './components/Career'
-import CTA from './components/CTA'
-import Footer from './components/Footer'
+import Hero from './papercraft/Hero'
+import Features from './papercraft/Features'
+import TrustedBy from './papercraft/TrustedBy'
+import Solutions from './papercraft/Solutions'
+import Approach from './papercraft/Approach'
+import CaseStudies from './papercraft/CaseStudies'
+import Voices from './papercraft/Voices'
+import Career from './papercraft/Career'
+import MidCta from './papercraft/MidCta'
+import Contact from './papercraft/Contact'
+import PapercraftSubpage, { BackHomeLink } from './papercraft/PapercraftSubpage'
+import CaseStudyDetailAyu from './components/CaseStudyDetail-Ayu'
 import CaseStudyDetailSaksham from './components/CaseStudyDetail-Saksham'
 import CaseStudyDetailSwasthya from './components/CaseStudyDetail-Swasthya'
-import ParticleBackground from './components/ParticleBackground'
-import CursorAnimation from './components/CursorAnimation'
-import './components/animations.css'
-import './components/cursor-animation.css'
-import './App.css'
+import './papercraft/papercraft.css'
 
 function HomePage() {
   return (
-    <div className="app">
-      <Navbar />
+    <div className="papercraft">
       <Hero />
       <Features />
       <TrustedBy />
       <Solutions />
+      <Approach />
       <CaseStudies />
+      <Voices />
       <Career />
-      <CTA />
-      <Footer />
+      <MidCta />
+      <Contact />
     </div>
+  )
+}
+
+function AyuCaseStudy() {
+  return (
+    <PapercraftSubpage>
+      <BackHomeLink />
+      <CaseStudyDetailAyu />
+    </PapercraftSubpage>
+  )
+}
+
+function SakshamCaseStudy() {
+  return (
+    <PapercraftSubpage>
+      <BackHomeLink />
+      <CaseStudyDetailSaksham />
+    </PapercraftSubpage>
+  )
+}
+
+function SwasthyaCaseStudy() {
+  return (
+    <PapercraftSubpage>
+      <BackHomeLink />
+      <CaseStudyDetailSwasthya />
+    </PapercraftSubpage>
   )
 }
 
 export default function App() {
   return (
-    <>
-      <ParticleBackground density={40} color="rgba(201, 169, 97, 0.3)" />
-      <CursorAnimation />
-      <Router>
-        <Routes>
+    <Router>
+      <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/case-study/saksham" element={
-          <>
-            <Navbar />
-            <CaseStudyDetailSaksham />
-            <Footer />
-          </>
-        } />
-        <Route path="/case-study/swasthya" element={
-          <>
-            <Navbar />
-            <CaseStudyDetailSwasthya />
-            <Footer />
-          </>
-        } />
+        <Route path="/case-study/ayu" element={<AyuCaseStudy />} />
+        <Route path="/case-study/saksham" element={<SakshamCaseStudy />} />
+        <Route path="/case-study/swasthya" element={<SwasthyaCaseStudy />} />
       </Routes>
-      </Router>
-    </>
+    </Router>
   )
 }
