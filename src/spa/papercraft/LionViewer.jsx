@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { Bounds, Center, OrbitControls, useGLTF } from '@react-three/drei'
 import { LION_GLB, LION_SRC } from './tokens'
 
-// Draco-compressed GLB (~4.6 MB vs ~63 MB original)
+// Draco-compressed neoleo-lion2 (~4.9 MB vs ~65 MB source)
 useGLTF.preload(LION_GLB, true)
 
 function LionModel() {

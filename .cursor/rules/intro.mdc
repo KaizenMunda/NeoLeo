@@ -1,0 +1,51 @@
+# NeoLeo intro sequence — working rules
+
+## Scope
+The intro is a self-contained overlay ("curtain") that renders ABOVE the
+existing site. The existing site is finished and correct.
+
+- Never modify existing page components, layout, styles or copy to
+  accommodate the intro. If the intro seems to need a change there, stop
+  and ask.
+- All intro code lives under `components/intro/`. The only permitted change
+  outside it is mounting the curtain and the head script described below.
+- The site must render and function correctly with the curtain removed
+  entirely. Verify this after every change.
+
+## Process
+- One step per request. Do not implement steps I haven't asked for, do not
+  "also fix" adjacent things, do not add features you think are missing.
+- Before writing code: state the plan — files added, files changed, and the
+  approach — then wait for approval.
+- After each step: state what to check in the browser to confirm it worked.
+
+## Animation code
+- All per-frame state lives in refs. Never call setState, never write to
+  context, never trigger a React re-render inside an animation loop or
+  useFrame. If you're about to, use a ref instead.
+- One clock. Every phase reads elapsed time from the same source. No
+  independent timers, no chained setTimeouts for animation timing.
+- Every timing, offset, count, colour and easing goes in a single exported
+  CONFIG object at the top of its file. No magic numbers inline.
+- Beam origin and target are recomputed every frame. Never cache a rect.
+- Keep the beam origin abstract — it is supplied to the FX layer, which
+  must not know or care whether it came from a constant or a 3D projection.
+
+## Three.js
+- devicePixelRatio capped at 2. No shadows, no post-processing, no
+  OrbitControls, no environment maps.
+- Dispose geometries, materials, textures and the renderer on unmount.
+- The GLB is an unrigged single mesh with arbitrary scale and origin.
+  Always normalise via Box3 at runtime. Never hardcode a scale factor.
+
+## Non-negotiables
+- prefers-reduced-motion: skip the intro entirely.
+- Every failure path (no WebGL, GLB missing, GLB slow, decode error) lands
+  on the working site with no broken state and no blocked interaction.
+- The curtain unmounts completely when finished. Never left at opacity 0.
+- The real site content stays in the DOM throughout, for crawlers.
+- Dev-only tooling (tuners, debug markers, replay) must not ship to
+  production.
+
+## Ask, don't assume
+If a requirement is ambiguous, ask. Do not pick a direction and build it.

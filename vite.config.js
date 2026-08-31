@@ -27,6 +27,7 @@ export default defineConfig({
         instruction: resolve(__dirname, 'other/instruction.html'),
         license: resolve(__dirname, 'other/license.html'),
         'style-guide': resolve(__dirname, 'other/style-guide.html'),
+        'state-a-hero': resolve(__dirname, 'state-a-hero.html'),
       },
     },
   },
