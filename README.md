@@ -1,89 +1,31 @@
 # NeoLeo
 
-A modern, animation-ready website—**Webflow-free** and powered by **GSAP** for smooth interactions.
+The site is a 3D office you can walk through. Hotspots open vision, projects, achievements, careers, contact, and a project brief. Case studies open from the projects screen.
 
-## Tech Stack
+## Tech stack
 
-- **Vite** – Fast build tool & dev server
-- **Three.js** – WebGL lion hero (cursor-reactive particle mesh)
-- **GSAP** – Professional-grade animations (ScrollTrigger included)
-- **Vanilla JS** – Lightweight, no framework overhead
-- **CSS** – Custom styles with CSS variables
+- Vite
+- React
+- Three.js via React Three Fiber
 
-## Getting Started
+## Scripts
 
 ```bash
-# Install dependencies
 npm install
-
-# Start dev server (with hot reload)
 npm run dev
-
-# Build for production
 npm run build
-
-# Preview production build
 npm run preview
 ```
 
-## Adding Animations
-
-### Data attributes (no JS needed)
-
-Add these to any element for automatic animations:
-
-| Attribute | Effect |
-|-----------|--------|
-| `data-animate="fade-up"` | Fades in and slides up on scroll |
-| `data-animate="parallax"` | Parallax scroll effect |
-| `data-animate="stagger"` | Staggers children with fade-up (add to parent) |
-
-### Custom GSAP animations
-
-Edit `src/animations.js` to add your own:
-
-```javascript
-// Example: Custom timeline
-gsap.from('.my-element', {
-  scrollTrigger: {
-    trigger: '.my-element',
-    start: 'top 80%',
-  },
-  duration: 1,
-  opacity: 0,
-  x: -50,
-  ease: 'power3.out',
-});
-```
-
-### GSAP resources
-
-- [GSAP Docs](https://gsap.com/docs/v3/)
-- [ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/)
-- [Ease Visualizer](https://gsap.com/docs/v3/Eases/)
-
-## Project Structure
+## Project structure
 
 ```
-├── src/
-│   ├── main.js       # Entry point
-│   ├── main.css      # Style imports
-│   ├── nav.js        # Mobile menu toggle
-│   ├── animations.js # GSAP animations
-│   ├── hero-lion.js  # WebGL lion hero (Three.js)
-│   ├── hero-lion.css # Hero container styles
-│   └── base.css      # Layout utilities
-├── css/
-│   ├── normalize.css
-│   └── neoleo-fcb1ec.webflow.css  # Theme styles
-├── public/
-│   ├── images/
-│   ├── fonts/
-│   ├── videos/
-│   └── documents/
-└── *.html            # Pages
+index.html
+src/main.jsx            # React entry
+src/App.jsx             # Routes
+src/office/             # 3D office
+src/case-studies/       # Ayu, Saksham, Swasthya
+src/site/               # Shared copy and case-study layout
+public/office/          # Office model and fallback image
+public/legal/ayu/       # Ayu privacy and terms
 ```
-
-## Deployment
-
-The project is configured for **Netlify**—push to your repo and Netlify will build and deploy automatically.

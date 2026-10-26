@@ -1,11 +1,16 @@
-/**
- * NeoLeo - Main stylesheet
- */
-@import '../css/normalize.css';
-@import './base.css';
-@import '../css/neoleo-fcb1ec.webflow.css';
-@import './hero-lion.css';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #001f20;
+}
