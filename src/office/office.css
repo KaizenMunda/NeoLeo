@@ -614,6 +614,34 @@
 .os-dots i:first-child {
   background: #e99600;
 }
+.os-crumbs {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  color: rgba(242, 240, 234, 0.85);
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+.os-crumbs button {
+  all: unset;
+  cursor: pointer;
+  color: #e99600;
+}
+.os-crumbs button:hover {
+  text-decoration: underline;
+}
+.os-crumbs button:focus-visible {
+  outline: 2px solid #e99600;
+  outline-offset: 2px;
+}
+.os-crumbs__sep {
+  margin: 0 6px;
+  opacity: 0.45;
+}
 .os-title {
   flex: 1;
   color: rgba(242, 240, 234, 0.6);
@@ -757,4 +785,144 @@
   .os--open {
     transition: none;
   }
+}
+
+/* projects: categories -> projects -> project */
+.os-card--tile {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 3px solid var(--accent);
+  border-radius: 14px;
+  color: rgba(242, 240, 234, 0.82);
+  font-size: 14px;
+  line-height: 1.55;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.os-card--tile:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(233, 150, 0, 0.35);
+  border-top-color: var(--accent);
+}
+.os-card--tile:focus-visible {
+  outline: 2px solid #e99600;
+  outline-offset: 3px;
+}
+.os-card--tile .os-tag {
+  margin-bottom: 10px;
+  text-align: left;
+}
+.os-open {
+  margin-top: auto;
+  padding-top: 12px;
+  color: var(--accent);
+  font-weight: 600;
+}
+.os-desc--clamp {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.os-lede {
+  max-width: 760px;
+  margin: 0 0 20px;
+  color: rgba(242, 240, 234, 0.86);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.os-head .os-lede {
+  margin-top: -12px;
+}
+.os-empty {
+  padding: 28px;
+  border: 1px dashed rgba(233, 150, 0, 0.35);
+  border-radius: 14px;
+  color: rgba(242, 240, 234, 0.7);
+  font-size: 15px;
+}
+.os-status {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.os-status--live {
+  background: rgba(47, 163, 160, 0.18);
+  color: #5fd1cc;
+}
+.os-status--dev {
+  background: rgba(233, 150, 0, 0.16);
+  color: #e99600;
+}
+.os-status--soon {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(242, 240, 234, 0.7);
+}
+.os-project {
+  max-width: 900px;
+}
+.os-project .os-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.os-project .os-head h2 {
+  margin: 0;
+}
+.os-project__title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.os-project .os-sub {
+  margin: 4px 0 0;
+  color: #e99600;
+  font-size: 15px;
+}
+.os-icon--lg {
+  font-size: 36px;
+}
+.os-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.os-client {
+  color: rgba(242, 240, 234, 0.7);
+  font-size: 13px;
+}
+.os-stats--wide {
+  max-width: 560px;
+  margin-bottom: 22px;
+}
+.os-h3 {
+  margin: 0 0 10px;
+  color: #e99600;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.os-project .os-highlights {
+  color: rgba(242, 240, 234, 0.86);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.os-project .os-actions {
+  --accent: #e99600;
+  margin-top: 22px;
 }

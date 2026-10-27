@@ -97,7 +97,9 @@ function SoundIcon({ on }) {
 }
 
 export default function OfficePage() {
-  const { section } = useParams()
+  const params = useParams()
+  const section = params.section
+  const subPath = params['*'] || ''
   const navigate = useNavigate()
   const reduced = useReducedMotion()
   const webgl = useWebGLAvailable()
@@ -133,11 +135,16 @@ export default function OfficePage() {
 
   useEffect(() => {
     const onKey = (e) => {
-      if (e.key === 'Escape') navigate('/')
+      if (e.key !== 'Escape') return
+      // inside Projects, Esc steps back one level; elsewhere it returns to the room
+      if (section === 'projects' && subPath) {
+        const up = subPath.split('/').filter(Boolean).slice(0, -1).join('/')
+        navigate(up ? `/projects/${up}` : '/projects')
+      } else navigate('/')
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [navigate])
+  }, [navigate, section, subPath])
 
   useEffect(() => {
     document.title = active ? `${HOTSPOTS[active].label} — NeoLeo` : 'NeoLeo — Bold Vision, Precise Execution'
@@ -253,7 +260,12 @@ export default function OfficePage() {
       </nav>
 
       <OfficePanel active={kind === 'panel' ? active : null} onClose={goHome} />
-      <ProjectsScreen open={kind === 'screen'} onClose={goHome} />
+      <ProjectsScreen
+        open={kind === 'screen'}
+        path={kind === 'screen' ? subPath : ''}
+        onNavigate={(p) => navigate(p ? `/projects/${p}` : '/projects')}
+        onClose={goHome}
+      />
     </div>
   )
 }

@@ -58,7 +58,7 @@ export default function App() {
         <Route path="/case-study/swasthya" element={<SwasthyaCaseStudy />} />
         <Route path="/office" element={<Navigate to="/" replace />} />
         <Route path="/office/:section" element={<LegacyOfficeRedirect />} />
-        <Route path="/:section" element={<OfficeRoute />} />
+        <Route path="/:section/*" element={<OfficeRoute />} />
       </Routes>
     </Router>
   )
